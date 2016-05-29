@@ -7,7 +7,7 @@ imageLayer.center()
 
 // Define a set of states with names (the original state is 'default')
 imageLayer.states.add({
-	second: {y:100, scale:0.6, rotationZ:100},
+	second: {y:2, scale:0.6, rotationZ:100},
 	third:  {y:300, scale:1.3},
 	fourth:	{y:200, scale:0.9, rotationZ:200},
 })

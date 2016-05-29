@@ -1,0 +1,28 @@
+{
+  "name": "framer-boilerplate",
+  "version": "1.0.0",
+  "description": "Framer boilerplate for quick templating and ui design",
+  "main": "app.js",
+  "scripts": {
+    "test": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thetanman/framer-boilerplate.git"
+  },
+  "keywords": [
+    "framerjs",
+    "ui"
+  ],
+  "author": "Tan Vo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thetanman/framer-boilerplate/issues"
+  },
+  "homepage": "https://github.com/thetanman/framer-boilerplate",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
