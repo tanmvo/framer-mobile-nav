@@ -19,7 +19,7 @@ scroll = new ScrollComponent({width: canvasWidth, height: canvasHeight});
 
 canvas = new Layer({x: 0, y: 0, width: canvasWidth, height: canvasHeight});
 
-	navigationBody = new Layer({x: 0, y: 0, width: canvasWidth, height: 1320, parent: scroll.content, backgroundColor: '#ccc'});
+	navigationBody = new Layer({x: 0, y: 0, width: canvasWidth, height: 0, parent: scroll.content, backgroundColor: '#ccc'});
 	scroll.scrollHorizontal = false
 
 	body = new Layer({x: 0, y: 0, width: canvasWidth, height: canvasHeight, backgroundColor: '#fff'});
@@ -48,12 +48,11 @@ navbar = new Layer({x: 0, y: 0, width: canvasWidth, height: menuHeight, backgrou
 
 // Menu items
 
-// , {layerName: 'women', label: 'Women'}, {layerName: 'men', label: 'Men'
 
 var categories = [
 	{layerName: 'newArrivals', label: 'New Arrivals', subCategories: [
-			{subLayerName: 'women', subLabel: 'Womens1'}, 
-			{subLayerName: 'women', subLabel: 'Mens1'}
+			{subLayerName: 'women', subLabel: 'Womens'}, 
+			{subLayerName: 'women', subLabel: 'Mens'}
 		]},
 	{layerName: 'womens', label: 'Womens', subCategories: [
 			{subLayerName: 'womensNewArrivals', subLabel: 'New Arrivals'}, 
@@ -71,7 +70,18 @@ var categories = [
 			{subLayerName: 'womensHeidi', subLabel: 'Heidi'},
 			{subLayerName: 'womensGiftCertificates', subLabel: 'Gift Certificates'}
 		]},
-	{layerName: 'womens', label: 'Womens', subCategories: [{subLayerName: 'womensAccessories', subLabel: 'Womens'}, {subLayerName: 'mensAccessories', subLabel: 'Mens'}]},
+	{layerName: 'mens', label: 'Mens', subCategories: [
+			{subLayerName: 'mensNewArrivals', subLabel: 'New Arrivals'}, 
+			{subLayerName: 'mensJackets', subLabel: 'Jackets'},
+			{subLayerName: 'mensKnits', subLabel: 'Knits'},
+			{subLayerName: 'mensPants', subLabel: 'Pants'},
+			{subLayerName: 'mensShirts', subLabel: 'Shirts'},
+			{subLayerName: 'mensShorts', subLabel: 'Shorts'},
+			{subLayerName: 'mensTshirtsPolos', subLabel: 'T-Shirts & Polos'},
+			{subLayerName: 'mensAuthenticSportswear', subLabel: 'Sportswear'},
+			{subLayerName: 'mensGiftCertificates', subLabel: 'Gift Certificates'},
+			{subLayerName: 'mensSales', subLabel: 'Sales'},
+		]},
 	{layerName: 'accessories', label: 'Accessories', subCategories: [{subLayerName: 'womensAccessories', subLabel: 'Womens'}, {subLayerName: 'mensAccessories', subLabel: 'Mens'}]},
 ];
 
@@ -92,7 +102,8 @@ for (category of categories) {
 	category.layerName.superLayer = navigationBody;
 } 
 
-
+navigationBody.height = categoryPosition;
+scroll.updateContent()
 
 // States
 
